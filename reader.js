@@ -130,12 +130,16 @@ function parseScripts(script) {
         }
     });  
 
+    let dwordTotal = 0;
     let parsedScripts = chunkedScripts.map(function(script) {
-        return `
+        let string = `
+    Script start position: ${dwordTotal}
     Script dword count: ${script[0].bytes[0]}
     Commands:
     ${parseIndividualScript(script.slice(1))}
         `
+        dwordTotal += script[0].bytes[0];
+        return string
     }).join('');
 
     return parsedScripts;
