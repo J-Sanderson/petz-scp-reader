@@ -366,6 +366,7 @@
     SCRIPTS:
     Number of script dwords: 738
     
+    Script start position: 0
     Script dword count: 12
     Commands:
     00: startPos
@@ -374,6 +375,7 @@
 	27: playAction2, 1, 10
 	63: endPos, 3, 1
         
+    Script start position: 12
     Script dword count: 8
     Commands:
     00: startPos
@@ -381,66 +383,77 @@
 	33: sequence2, 0
 	63: endPos, 190, 184
         
+    Script start position: 20
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 193, 190
         
+    Script start position: 26
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 184, 181
         
+    Script start position: 32
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 65, 48
         
+    Script start position: 38
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 75, 65
         
+    Script start position: 44
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 88, 75
         
+    Script start position: 50
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 48, 31
         
+    Script start position: 56
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 93, 88
         
+    Script start position: 62
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 163, 146
         
+    Script start position: 68
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 167, 163
         
+    Script start position: 74
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 146, 141
         
+    Script start position: 80
     Script dword count: 12
     Commands:
     00: startPos
@@ -449,54 +462,63 @@
 	33: sequence2, 8, 7, 6
 	63: endPos, 112, 106
         
+    Script start position: 92
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 133, 122
         
+    Script start position: 98
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 122, 113
         
+    Script start position: 104
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 140, 133
         
+    Script start position: 110
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 30, 0
         
+    Script start position: 116
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 97, 94
         
+    Script start position: 122
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 103, 97
         
+    Script start position: 128
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 105, 103
         
+    Script start position: 134
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 171, 168
         
+    Script start position: 140
     Script dword count: 8
     Commands:
     00: startPos
@@ -504,12 +526,14 @@
 	33: sequence2, 0
 	63: endPos, 177, 171
         
+    Script start position: 148
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 180, 177
         
+    Script start position: 154
     Script dword count: 23
     Commands:
     00: startPos
@@ -519,6 +543,7 @@
 	11: endBlock0, 18, 16, 15, 14, 12
 	63: endPos, 94, 94, 94, 94, 94, 94, 94, 94, 94
         
+    Script start position: 177
     Script dword count: 24
     Commands:
     00: startPos
@@ -534,41 +559,48 @@
 	27: playAction2
 	63: endPos, 1, 24
         
+    Script start position: 201
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 203, 198
         
+    Script start position: 207
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 221, 203
         
+    Script start position: 213
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 226, 221
         
+    Script start position: 219
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 198, 203
         
+    Script start position: 225
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 233, 227
         
+    Script start position: 231
     Script dword count: 4
     Commands:
     00: startPos
 	63: endPos, 198
         
+    Script start position: 235
     Script dword count: 34
     Commands:
     00: startPos
@@ -591,6 +623,7 @@
 	27: playAction2
 	63: endPos, 1, 16
         
+    Script start position: 269
     Script dword count: 8
     Commands:
     00: startPos
@@ -598,12 +631,14 @@
 	33: sequence2, 0
 	63: endPos, 197, 194
         
+    Script start position: 277
     Script dword count: 16
     Commands:
     00: startPos
 	48: soundPlay3
 	63: endPos, 94, 94, 94, 94, 94, 94, 94, 94, 94, 2, 1, 0
         
+    Script start position: 293
     Script dword count: 12
     Commands:
     00: startPos
@@ -614,11 +649,13 @@
 	11: endBlock0, 1, 14
 	63: endPos
         
+    Script start position: 305
     Script dword count: 15
     Commands:
     00: startPos
 	63: endPos, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48
         
+    Script start position: 320
     Script dword count: 16
     Commands:
     00: startPos
@@ -629,6 +666,7 @@
 	27: playAction2, 3, 1
 	63: endPos, 5, 11
         
+    Script start position: 336
     Script dword count: 18
     Commands:
     00: startPos
@@ -640,16 +678,19 @@
 	2F: rand2, 14
 	63: endPos, 2, 0
         
+    Script start position: 354
     Script dword count: 12
     Commands:
     00: startPos
 	63: endPos, 94, 94, 94, 94, 94, 94, 94, 94, 94
         
+    Script start position: 366
     Script dword count: 12
     Commands:
     00: startPos
 	63: endPos, 94, 94, 94, 94, 94, 94, 94, 94, 94
         
+    Script start position: 378
     Script dword count: 19
     Commands:
     00: startPos
@@ -660,17 +701,20 @@
 	33: sequence2, 0
 	63: endPos, 254, 245
         
+    Script start position: 397
     Script dword count: 3
     Commands:
     00: startPos
 	63: endPos
         
+    Script start position: 400
     Script dword count: 6
     Commands:
     00: startPos
 	33: sequence2
 	63: endPos, 15, 255
         
+    Script start position: 406
     Script dword count: 12
     Commands:
     00: startPos
@@ -679,6 +723,7 @@
 	33: sequence2, 8, 7, 6
 	63: endPos, 112, 106
         
+    Script start position: 418
     Script dword count: 11
     Commands:
     00: startPos
@@ -687,6 +732,7 @@
 	33: sequence2, 2
 	63: endPos, 122, 117
         
+    Script start position: 429
     Script dword count: 63
     Commands:
     00: startPos
@@ -723,6 +769,7 @@
 	11: endBlock0, 0, 1, 0
 	63: endPos
         
+    Script start position: 492
     Script dword count: 49
     Commands:
     00: startPos
@@ -753,6 +800,7 @@
 	11: endBlock0
 	63: endPos
         
+    Script start position: 541
     Script dword count: 31
     Commands:
     00: startPos
@@ -772,6 +820,7 @@
 	11: endBlock0, 4, 2
 	63: endPos
         
+    Script start position: 572
     Script dword count: 27
     Commands:
     00: startPos
@@ -789,6 +838,7 @@
 	11: endBlock0
 	63: endPos
         
+    Script start position: 599
     Script dword count: 52
     Commands:
     00: startPos
@@ -818,6 +868,7 @@
 	11: endBlock0
 	63: endPos
         
+    Script start position: 651
     Script dword count: 87
     Commands:
     00: startPos
