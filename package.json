@@ -1,0 +1,17 @@
+{
+  "name": "petz-scp-reader",
+  "version": "1.0.0",
+  "description": "File reader for .scp files from the Petz games",
+  "main": "reader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "petz"
+  ],
+  "author": "J Sanderson",
+  "license": "ISC",
+  "dependencies": {
+    "binary-parser": "^1.6.2"
+  }
+}
