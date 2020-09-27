@@ -147,15 +147,16 @@ function parseScripts(script) {
 }
 
 function parseIndividualScript(script) {
+    const commandEnd = 64
     let chunkedCommands = [];
 
     script.forEach(function (dword, index) {
-        if (dword.bytes[3] === 64) {
+        if (dword.bytes[3] === commandEnd) {
             command = [dword]
             let commandDone = false;
             let pos = index + 1
             while (!commandDone) {
-                if (script[pos] && script[pos].bytes[3] !== 64) {
+                if (script[pos] && script[pos].bytes[3] !== commandEnd) {
                     command.push(script[pos])
                     pos++;
                 } else {
@@ -166,7 +167,7 @@ function parseIndividualScript(script) {
         }
     });
 
-    let parsedScript = chunkedCommands.map(function(command, index) {
+    let parsedScript = chunkedCommands.map(function(command) {
         let list = [];
         for (var i = 0; i < command.length; i++) {
             if (i === 0) {
@@ -175,6 +176,7 @@ function parseIndividualScript(script) {
             } else {
                 // get the params
                 // TODO if fudger, show fudger name instead
+                // if scpVerbs[leftPad(command[0].bytes[0])] is in the list
                 list.push(` ${leftPad(command[i].bytes[0].toString(16).toUpperCase())}`);
             }
         }
