@@ -52,10 +52,11 @@ fs.readFile(process.argv[2], function (err, data) {
         .uint32('dwordCount');
     const scriptDwords = scriptDwordParser.parse(data);
 
+    //this causes the wrong parameters
     const dwordParser = new Parser()
         .endianess('little')
         .array('bytes', {
-            type: 'uint8',
+            type: "uint8",
             length: 4,
         });
     const scriptParser = new Parser()
@@ -75,7 +76,7 @@ fs.readFile(process.argv[2], function (err, data) {
     // console.log(scriptDwords);
     // console.log(script.dwords);
 
-    fs.writeFile('output', parseResults(header, actions, scriptDwords, script), function(err) {
+    fs.writeFile('output.txt', parseResults(header, actions, scriptDwords, script), function(err) {
         if (err) {
             console.log('Error saving file');
             process.exit();
@@ -148,23 +149,32 @@ function parseScripts(script) {
 function parseIndividualScript(script) {
     let chunkedCommands = [];
 
-    let sliceStart = 0;
     script.forEach(function (dword, index) {
         if (dword.bytes[3] === 64) {
-            chunkedCommands.push(script.slice(sliceStart, index + 1));
-            sliceStart = index + 1;
+            command = [dword]
+            let commandDone = false;
+            let pos = index + 1
+            while (!commandDone) {
+                if (script[pos] && script[pos].bytes[3] !== 64) {
+                    command.push(script[pos])
+                    pos++;
+                } else {
+                    commandDone = true;
+                }
+            }
+            chunkedCommands.push(command);
         }
     });
 
-    let parsedScript = chunkedCommands.map(function(command) {
+    let parsedScript = chunkedCommands.map(function(command, index) {
         let list = [];
-        for (var i = command.length; i > 0; i--) {
-            if (i === command.length) {
-                //get the verb
-                list.push(`${leftPad(command[i - 1].bytes[0].toString(16).toUpperCase())}: ${scpVerbs[leftPad(command[i - 1].bytes[0].toString(16).toUpperCase())]}`);
+        for (var i = 0; i < command.length; i++) {
+            if (i === 0) {
+                // get the verb
+                list.push(`${leftPad(command[i].bytes[0].toString(16).toUpperCase())}: ${scpVerbs[leftPad(command[i].bytes[0].toString(16).toUpperCase())]}`);
             } else {
-                //get the params
-                list.push(` ${command[i - 1].bytes[0]}`);
+                // get the params
+                list.push(` ${leftPad(command[i].bytes[0].toString(16).toUpperCase())}`);
             }
         }
         return list;
