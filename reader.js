@@ -121,11 +121,12 @@ function parseActions(actions) {
 }
 
 function parseScripts(script) {
+    const scriptEnd = 99;
     let chunkedScripts = [];
 
     let sliceStart = 0;
     script.dwords.forEach(function (dword, index) {
-        if (dword.bytes[0] === 99) {
+        if (dword.bytes[0] === scriptEnd) {
             chunkedScripts.push(script.dwords.slice(sliceStart, index + 1));
             sliceStart = index + 1;
         }
@@ -140,14 +141,14 @@ function parseScripts(script) {
     ${parseIndividualScript(script.slice(1))}
         `
         dwordTotal += script[0].bytes[0];
-        return string
+        return string;
     }).join('');
 
     return parsedScripts;
 }
 
 function parseIndividualScript(script) {
-    const commandEnd = 64
+    const commandEnd = 64;
     let chunkedCommands = [];
 
     script.forEach(function (dword, index) {
