@@ -172,15 +172,15 @@ function parseIndividualScript(script) {
         for (var i = 0; i < command.length; i++) {
             if (i === 0) {
                 // get the verb
-                list.push(`${leftPad(command[i].bytes[0].toString(16).toUpperCase())}: ${scpVerbs[leftPad(command[i].bytes[0].toString(16).toUpperCase())]}`);
+                list.push(`${toHexString(command[i].bytes[0])}: ${scpVerbs[toHexString(command[i].bytes[0])]}`);
             } else {
                 // get the params
-                // if fudger and first param, show fudger name
-                if (callsFudger.includes(scpVerbs[leftPad(command[0].bytes[0].toString(16).toUpperCase())]) && i === 1) {
-                    list.push(` ${fudgers[leftPad(command[i].bytes[0].toString(16).toUpperCase())]}`)
+                if (callsFudger.includes(scpVerbs[toHexString(command[0].bytes[0])]) && i === 1) {
+                    // if fudger and first param, show fudger name
+                    list.push(` ${fudgers[toHexString(command[i].bytes[0])]}`);
                 } else {
-                    //show param as hex number
-                    list.push(` ${leftPad(command[i].bytes[0].toString(16).toUpperCase())}`);
+                    // else show param as hex number
+                    list.push(` ${toHexString(command[i].bytes[0])}`);
                 }
             }
         }
@@ -194,6 +194,10 @@ function leftPad(string) {
         string = `0${string}`;
     }
     return string
+}
+
+function toHexString(value) {
+    return leftPad(value.toString(16).toUpperCase());
 }
 
 const scpVerbs = {
