@@ -175,9 +175,13 @@ function parseIndividualScript(script) {
                 list.push(`${leftPad(command[i].bytes[0].toString(16).toUpperCase())}: ${scpVerbs[leftPad(command[i].bytes[0].toString(16).toUpperCase())]}`);
             } else {
                 // get the params
-                // TODO if fudger, show fudger name instead
-                // if scpVerbs[leftPad(command[0].bytes[0])] is in the list
-                list.push(` ${leftPad(command[i].bytes[0].toString(16).toUpperCase())}`);
+                // if fudger and first param, show fudger name
+                if (callsFudger.includes(scpVerbs[leftPad(command[0].bytes[0].toString(16).toUpperCase())]) && i === 1) {
+                    list.push(` ${fudgers[leftPad(command[i].bytes[0].toString(16).toUpperCase())]}`)
+                } else {
+                    //show param as hex number
+                    list.push(` ${leftPad(command[i].bytes[0].toString(16).toUpperCase())}`);
+                }
             }
         }
         return list;
