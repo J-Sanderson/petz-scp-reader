@@ -1,0 +1,914 @@
+
+    mouse.scp output:
+
+    HEADER:
+    Number of animations: 11
+    Unknown value: 5
+    Number of actions: 44
+
+    -----
+
+    ACTIONS:
+    ID: 0
+    Number of associated scripts: 1
+    Start animation: 0
+    End animation: 0
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 0
+        
+    ID: 1
+    Number of associated scripts: 1
+    Start animation: 7
+    End animation: 7
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 12
+        
+    ID: 2
+    Number of associated scripts: 1
+    Start animation: 7
+    End animation: 9
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 20
+        
+    ID: 3
+    Number of associated scripts: 1
+    Start animation: 9
+    End animation: 7
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 26
+        
+    ID: 4
+    Number of associated scripts: 3
+    Start animation: 1
+    End animation: 1
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 32
+        
+    ID: 5
+    Number of associated scripts: 1
+    Start animation: 9
+    End animation: 1
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 50
+        
+    ID: 6
+    Number of associated scripts: 1
+    Start animation: 1
+    End animation: 9
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 56
+        
+    ID: 7
+    Number of associated scripts: 1
+    Start animation: 8
+    End animation: 8
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 62
+        
+    ID: 8
+    Number of associated scripts: 1
+    Start animation: 8
+    End animation: 9
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 68
+        
+    ID: 9
+    Number of associated scripts: 1
+    Start animation: 9
+    End animation: 8
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 74
+        
+    ID: 10
+    Number of associated scripts: 1
+    Start animation: 9
+    End animation: 9
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 80
+        
+    ID: 11
+    Number of associated scripts: 1
+    Start animation: 2
+    End animation: 2
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 92
+        
+    ID: 12
+    Number of associated scripts: 1
+    Start animation: 9
+    End animation: 2
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 98
+        
+    ID: 13
+    Number of associated scripts: 1
+    Start animation: 2
+    End animation: 9
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 104
+        
+    ID: 14
+    Number of associated scripts: 1
+    Start animation: 2
+    End animation: 2
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 110
+        
+    ID: 15
+    Number of associated scripts: 1
+    Start animation: 9
+    End animation: 4
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 116
+        
+    ID: 16
+    Number of associated scripts: 1
+    Start animation: 4
+    End animation: 4
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 122
+        
+    ID: 17
+    Number of associated scripts: 1
+    Start animation: 4
+    End animation: 9
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 128
+        
+    ID: 18
+    Number of associated scripts: 1
+    Start animation: 9
+    End animation: 10
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 134
+        
+    ID: 19
+    Number of associated scripts: 1
+    Start animation: 10
+    End animation: 10
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 140
+        
+    ID: 20
+    Number of associated scripts: 1
+    Start animation: 10
+    End animation: 9
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 148
+        
+    ID: 21
+    Number of associated scripts: 1
+    Start animation: 9
+    End animation: 9
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 154
+        
+    ID: 22
+    Number of associated scripts: 1
+    Start animation: 0
+    End animation: 0
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 177
+        
+    ID: 23
+    Number of associated scripts: 1
+    Start animation: 3
+    End animation: 6
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 201
+        
+    ID: 24
+    Number of associated scripts: 1
+    Start animation: 6
+    End animation: 6
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 207
+        
+    ID: 25
+    Number of associated scripts: 1
+    Start animation: 6
+    End animation: 7
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 213
+        
+    ID: 26
+    Number of associated scripts: 1
+    Start animation: 6
+    End animation: 3
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 219
+        
+    ID: 27
+    Number of associated scripts: 1
+    Start animation: 7
+    End animation: 3
+    Unknown value: 1
+    Same animation modifier: 3
+    Script start point: 225
+        
+    ID: 28
+    Number of associated scripts: 1
+    Start animation: 3
+    End animation: 3
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 231
+        
+    ID: 29
+    Number of associated scripts: 1
+    Start animation: 0
+    End animation: 0
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 235
+        
+    ID: 30
+    Number of associated scripts: 1
+    Start animation: 7
+    End animation: 7
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 269
+        
+    ID: 31
+    Number of associated scripts: 1
+    Start animation: 9
+    End animation: 9
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 277
+        
+    ID: 32
+    Number of associated scripts: 1
+    Start animation: 0
+    End animation: 0
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 293
+        
+    ID: 33
+    Number of associated scripts: 1
+    Start animation: 1
+    End animation: 1
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 305
+        
+    ID: 34
+    Number of associated scripts: 1
+    Start animation: 5
+    End animation: 5
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 320
+        
+    ID: 35
+    Number of associated scripts: 1
+    Start animation: 0
+    End animation: 0
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 336
+        
+    ID: 36
+    Number of associated scripts: 1
+    Start animation: 9
+    End animation: 9
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 354
+        
+    ID: 37
+    Number of associated scripts: 1
+    Start animation: 9
+    End animation: 9
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 366
+        
+    ID: 38
+    Number of associated scripts: 1
+    Start animation: 9
+    End animation: 5
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 378
+        
+    ID: 39
+    Number of associated scripts: 1
+    Start animation: 5
+    End animation: 5
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 397
+        
+    ID: 40
+    Number of associated scripts: 1
+    Start animation: 1
+    End animation: 1
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 400
+        
+    ID: 41
+    Number of associated scripts: 1
+    Start animation: 9
+    End animation: 9
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 406
+        
+    ID: 42
+    Number of associated scripts: 1
+    Start animation: 9
+    End animation: 2
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 418
+        
+    ID: 43
+    Number of associated scripts: 6
+    Start animation: 0
+    End animation: 0
+    Unknown value: 0
+    Same animation modifier: 3
+    Script start point: 429
+        
+    -----
+
+    SCRIPTS:
+    Number of script dwords: 738
+    
+    Script start position: 0
+    Script dword count: 12
+    Commands:
+    00: startPos
+	27: playAction2, 0B, 02
+	27: playAction2, 0A, 01
+	27: playAction2, 01, 03
+	63: endPos
+        
+    Script start position: 12
+    Script dword count: 8
+    Commands:
+    00: startPos
+	0F: enableFudgeAim1, 00
+	33: sequence2, B8, BE
+	63: endPos
+        
+    Script start position: 20
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, BE, C1
+	63: endPos
+        
+    Script start position: 26
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, B5, B8
+	63: endPos
+        
+    Script start position: 32
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, 30, 41
+	63: endPos
+        
+    Script start position: 38
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, 41, 4B
+	63: endPos
+        
+    Script start position: 44
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, 4B, 58
+	63: endPos
+        
+    Script start position: 50
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, 1F, 30
+	63: endPos
+        
+    Script start position: 56
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, 58, 5D
+	63: endPos
+        
+    Script start position: 62
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, 92, A3
+	63: endPos
+        
+    Script start position: 68
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, A3, A7
+	63: endPos
+        
+    Script start position: 74
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, 8D, 92
+	63: endPos
+        
+    Script start position: 80
+    Script dword count: 12
+    Commands:
+    00: startPos
+	52: soundSetVolume1, 55
+	48: soundPlay3, 06, 07, 08
+	33: sequence2, 6A, 70
+	63: endPos
+        
+    Script start position: 92
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, 7A, 85
+	63: endPos
+        
+    Script start position: 98
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, 71, 7A
+	63: endPos
+        
+    Script start position: 104
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, 85, 8C
+	63: endPos
+        
+    Script start position: 110
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, 00, 1E
+	63: endPos
+        
+    Script start position: 116
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, 5E, 61
+	63: endPos
+        
+    Script start position: 122
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, 61, 67
+	63: endPos
+        
+    Script start position: 128
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, 67, 69
+	63: endPos
+        
+    Script start position: 134
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, A8, AB
+	63: endPos
+        
+    Script start position: 140
+    Script dword count: 8
+    Commands:
+    00: startPos
+	0F: enableFudgeAim1, 00
+	33: sequence2, AB, B1
+	63: endPos
+        
+    Script start position: 148
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, B1, B4
+	63: endPos
+        
+    Script start position: 154
+    Script dword count: 23
+    Commands:
+    00: startPos
+	52: soundSetVolume1, 55
+	57: startBlockChance1, 32
+	4A: soundPlay5, 0C, 0E, 0F, 10, 12
+	11: endBlock0, 5E, 5E, 5E, 5E, 5E, 5E, 5E, 5E, 5E
+	63: endPos
+        
+    Script start position: 177
+    Script dword count: 24
+    Commands:
+    00: startPos
+	39: setFudgerRate2, 03, B8
+	39: setFudgerRate2, 04, B8
+	55: startBlockLoop1
+	2F: rand2, 01, 04
+	1E: lookForward0
+	27: playAction2, 18
+	2F: rand2, 01, 02
+	11: endBlock0
+	1E: lookForward0
+	27: playAction2, 18, 01
+	63: endPos
+        
+    Script start position: 201
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, C6, CB
+	63: endPos
+        
+    Script start position: 207
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, CB, DD
+	63: endPos
+        
+    Script start position: 213
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, DD, E2
+	63: endPos
+        
+    Script start position: 219
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, CB, C6
+	63: endPos
+        
+    Script start position: 225
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, E3, E9
+	63: endPos
+        
+    Script start position: 231
+    Script dword count: 4
+    Commands:
+    00: startPos, C6
+	63: endPos
+        
+    Script start position: 235
+    Script dword count: 34
+    Commands:
+    00: startPos
+	55: startBlockLoop1
+	2F: rand2, 01, 04
+	1E: lookForward0
+	27: playAction2, 10
+	2F: rand2, 01, 02
+	11: endBlock0
+	55: startBlockLoop1
+	2F: rand2, 00, 01
+	55: startBlockLoop1
+	2F: rand2, 03, 06
+	1E: lookForward0
+	27: playAction2, 0B
+	2F: rand2, 01, 02
+	11: endBlock0
+	11: endBlock0
+	1E: lookForward0
+	27: playAction2, 10, 01
+	63: endPos
+        
+    Script start position: 269
+    Script dword count: 8
+    Commands:
+    00: startPos
+	0F: enableFudgeAim1, 00
+	33: sequence2, C2, C5
+	63: endPos
+        
+    Script start position: 277
+    Script dword count: 16
+    Commands:
+    00: startPos
+	48: soundPlay3, 00, 01, 02, 5E, 5E, 5E, 5E, 5E, 5E, 5E, 5E, 5E
+	63: endPos
+        
+    Script start position: 293
+    Script dword count: 12
+    Commands:
+    00: startPos
+	1E: lookForward0
+	55: startBlockLoop1
+	2F: rand2, 01, 02
+	27: playAction2, 0E, 01
+	11: endBlock0
+	63: endPos
+        
+    Script start position: 305
+    Script dword count: 15
+    Commands:
+    00: startPos, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30
+	63: endPos
+        
+    Script start position: 320
+    Script dword count: 16
+    Commands:
+    00: startPos
+	27: playAction2, 0B
+	2F: rand2, 01, 03
+	27: playAction2, 0E
+	2F: rand2, 01, 03
+	27: playAction2, 0B, 05
+	63: endPos
+        
+    Script start position: 336
+    Script dword count: 18
+    Commands:
+    00: startPos
+	27: playAction2, 13
+	2F: rand2, 03, 07
+	27: playAction2, 0B
+	2F: rand2, 01, 04
+	27: playAction2, 0E
+	2F: rand2, 00, 02
+	63: endPos
+        
+    Script start position: 354
+    Script dword count: 12
+    Commands:
+    00: startPos, 5E, 5E, 5E, 5E, 5E, 5E, 5E, 5E, 5E
+	63: endPos
+        
+    Script start position: 366
+    Script dword count: 12
+    Commands:
+    00: startPos, 5E, 5E, 5E, 5E, 5E, 5E, 5E, 5E, 5E
+	63: endPos
+        
+    Script start position: 378
+    Script dword count: 19
+    Commands:
+    00: startPos
+	2A: playLayeredAction3, 27, 01, 01
+	48: soundPlay3, 06, 07, 08
+	33: sequence2, EA, F4
+	09: cueCode1, 00
+	33: sequence2, F5, FE
+	63: endPos
+        
+    Script start position: 397
+    Script dword count: 3
+    Commands:
+    00: startPos
+	63: endPos
+        
+    Script start position: 400
+    Script dword count: 6
+    Commands:
+    00: startPos
+	33: sequence2, FF, 0F
+	63: endPos
+        
+    Script start position: 406
+    Script dword count: 12
+    Commands:
+    00: startPos
+	52: soundSetVolume1, 55
+	48: soundPlay3, 06, 07, 08
+	33: sequence2, 6A, 70
+	63: endPos
+        
+    Script start position: 418
+    Script dword count: 11
+    Commands:
+    00: startPos
+	33: sequence2, 71, 74
+	09: cueCode1, 02
+	33: sequence2, 75, 7A
+	63: endPos
+        
+    Script start position: 429
+    Script dword count: 63
+    Commands:
+    00: startPos
+	55: startBlockLoop1
+	2F: rand2, 02, 04
+	55: startBlockLoop1
+	2F: rand2, 01, 06
+	1E: lookForward0
+	3A: setFudgerTarget2, 00
+	2F: rand2, 1E, E2
+	27: playAction2, 01
+	2F: rand2, 01, 02
+	11: endBlock0
+	2A: playLayeredAction3, 15
+	2F: rand2, 00, 01, 00
+	57: startBlockChance1, 32
+	55: startBlockLoop1
+	2F: rand2, 01, 04
+	19: lookAtRandomPt0
+	27: playAction2, 0B
+	2F: rand2, 01, 03
+	11: endBlock0
+	11: endBlock0
+	59: startBlockElse0
+	55: startBlockLoop1
+	2F: rand2, 01, 04
+	19: lookAtRandomPt0
+	27: playAction2, 10
+	2F: rand2, 01, 03
+	11: endBlock0
+	11: endBlock0
+	2A: playLayeredAction3, 15
+	2F: rand2, 00, 01, 00
+	11: endBlock0
+	63: endPos
+        
+    Script start position: 492
+    Script dword count: 49
+    Commands:
+    00: startPos
+	55: startBlockLoop1
+	2F: rand2, 02, 06
+	57: startBlockChance1, 32
+	55: startBlockLoop1
+	2F: rand2, 05, 14
+	1E: lookForward0
+	38: setFudgerDrift2, 00
+	2F: rand2, 07, 0B
+	27: playAction2, 1E
+	2F: rand2, 01, 02
+	11: endBlock0
+	30: resetFudger1, 00
+	11: endBlock0
+	59: startBlockElse0
+	55: startBlockLoop1
+	2F: rand2, 05, 14
+	1E: lookForward0
+	38: setFudgerDrift2, 00
+	2F: rand2, F9, F5
+	27: playAction2, 1E
+	2F: rand2, 01, 02
+	11: endBlock0
+	30: resetFudger1, 00
+	11: endBlock0
+	11: endBlock0
+	63: endPos
+        
+    Script start position: 541
+    Script dword count: 31
+    Commands:
+    00: startPos
+	1E: lookForward0
+	55: startBlockLoop1
+	2F: rand2, 02, 04
+	55: startBlockLoop1
+	2F: rand2, 01, 04
+	38: setFudgerDrift2, 00
+	2F: rand2, FD, 02
+	27: playAction2, 13
+	2F: rand2, 01, 02
+	11: endBlock0
+	30: resetFudger1, 00
+	27: playAction2, 07
+	2F: rand2, 02, 04
+	11: endBlock0
+	63: endPos
+        
+    Script start position: 572
+    Script dword count: 27
+    Commands:
+    00: startPos
+	55: startBlockLoop1
+	2F: rand2, 02, 06
+	1E: lookForward0
+	55: startBlockLoop1
+	2F: rand2, 02, 04
+	38: setFudgerDrift2, 00, 14
+	27: playAction2, 0A, 01
+	30: resetFudger1, 00
+	27: playAction2, 1E
+	2F: rand2, 03, 08
+	11: endBlock0
+	11: endBlock0
+	63: endPos
+        
+    Script start position: 599
+    Script dword count: 52
+    Commands:
+    00: startPos
+	1E: lookForward0
+	55: startBlockLoop1
+	2F: rand2, 02, 04
+	55: startBlockLoop1
+	2F: rand2, 01, 04
+	38: setFudgerDrift2, 00
+	2F: rand2, FC, 04
+	27: playAction2, 13
+	2F: rand2, 01, 04
+	2A: playLayeredAction3, 15
+	2F: rand2, 00, 01, 00
+	27: playAction2, 13
+	2F: rand2, 01, 04
+	11: endBlock0
+	30: resetFudger1, 00
+	57: startBlockChance1, 32
+	27: playAction2, 07
+	2F: rand2, 02, 04
+	11: endBlock0
+	59: startBlockElse0
+	27: playAction2, 0B
+	2F: rand2, 02, 04
+	11: endBlock0
+	11: endBlock0
+	63: endPos
+        
+    Script start position: 651
+    Script dword count: 87
+    Commands:
+    00: startPos
+	3A: setFudgerTarget2, 00
+	2F: rand2, F9, 07
+	27: playAction2, 13
+	2F: rand2, 04, 07
+	2A: playLayeredAction3, 15
+	2F: rand2, 00, 01, 00
+	1D: lookAtUser0
+	27: playAction2, 13, 01
+	1D: lookAtUser0
+	27: playAction2, 13, 01
+	1D: lookAtUser0
+	30: resetFudger1, 00
+	55: startBlockLoop1
+	2F: rand2, 01, 03
+	57: startBlockChance1, 32
+	1B: lookAtSprite1, 01
+	2A: playLayeredAction3, 15
+	2F: rand2, 00, 01, 00
+	27: playAction2, 0B
+	2F: rand2, 01, 02
+	2A: playLayeredAction3, 15
+	2F: rand2, 00, 01, 00
+	27: playAction2, 0B
+	2F: rand2, 01, 02
+	11: endBlock0
+	59: startBlockElse0
+	1D: lookAtUser0
+	2A: playLayeredAction3, 15
+	2F: rand2, 00, 01, 00
+	27: playAction2, 0B
+	2F: rand2, 01, 02
+	2A: playLayeredAction3, 15
+	2F: rand2, 00, 01, 00
+	27: playAction2, 0B
+	2F: rand2, 01, 02
+	11: endBlock0
+	11: endBlock0
+	63: endPos
+        
+    
