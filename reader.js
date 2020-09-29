@@ -121,11 +121,12 @@ function parseActions(actions) {
 }
 
 function parseScripts(script) {
+    const scriptEnd = 99;
     let chunkedScripts = [];
 
     let sliceStart = 0;
     script.dwords.forEach(function (dword, index) {
-        if (dword.bytes[0] === 99) {
+        if (dword.bytes[0] === scriptEnd) {
             chunkedScripts.push(script.dwords.slice(sliceStart, index + 1));
             sliceStart = index + 1;
         }
@@ -140,22 +141,23 @@ function parseScripts(script) {
     ${parseIndividualScript(script.slice(1))}
         `
         dwordTotal += script[0].bytes[0];
-        return string
+        return string;
     }).join('');
 
     return parsedScripts;
 }
 
 function parseIndividualScript(script) {
+    const commandEnd = 64;
     let chunkedCommands = [];
 
     script.forEach(function (dword, index) {
-        if (dword.bytes[3] === 64) {
+        if (dword.bytes[3] === commandEnd) {
             command = [dword]
             let commandDone = false;
             let pos = index + 1
             while (!commandDone) {
-                if (script[pos] && script[pos].bytes[3] !== 64) {
+                if (script[pos] && script[pos].bytes[3] !== commandEnd) {
                     command.push(script[pos])
                     pos++;
                 } else {
@@ -166,15 +168,21 @@ function parseIndividualScript(script) {
         }
     });
 
-    let parsedScript = chunkedCommands.map(function(command, index) {
+    let parsedScript = chunkedCommands.map(function(command) {
         let list = [];
         for (var i = 0; i < command.length; i++) {
             if (i === 0) {
                 // get the verb
-                list.push(`${leftPad(command[i].bytes[0].toString(16).toUpperCase())}: ${scpVerbs[leftPad(command[i].bytes[0].toString(16).toUpperCase())]}`);
+                list.push(`${toHexString(command[i].bytes[0])}: ${scpVerbs[toHexString(command[i].bytes[0])]}`);
             } else {
                 // get the params
-                list.push(` ${leftPad(command[i].bytes[0].toString(16).toUpperCase())}`);
+                if (callsFudger.includes(scpVerbs[toHexString(command[0].bytes[0])]) && i === 1) {
+                    // if fudger and first param, show fudger name
+                    list.push(` ${fudgers[toHexString(command[i].bytes[0])]}`);
+                } else {
+                    // else show param as hex number
+                    list.push(` ${toHexString(command[i].bytes[0])}`);
+                }
             }
         }
         return list;
@@ -187,6 +195,10 @@ function leftPad(string) {
         string = `0${string}`;
     }
     return string
+}
+
+function toHexString(value) {
+    return leftPad(value.toString(16).toUpperCase());
 }
 
 const scpVerbs = {
@@ -290,4 +302,94 @@ const scpVerbs = {
     '61': 'targetSprite4',
     '62': 'throwMe0',
     '63': 'endPos',
+}
+
+const callsFudger = [
+    'alignFudgeBallToPtSetup2',
+    'disableFudgeAim1',
+    'enableFudgeAim1',
+    'resetFudger1',
+    'resumeFudging1',
+    'setFudgeAimDefaults5',
+    'setFudgerDrift2',
+    'setFudgerRate2',
+    'setFudgerTarget2',
+    'setFudgerNow2',
+    'stopFudging1',
+    'suspendFudging1',
+]
+
+const fudgers = {
+    '00': 'rotation',
+    '01': 'roll',
+    '02': 'tilt',
+    '03': 'headRotation',
+    '04': 'headTilt',
+    '05': 'headCock',
+    '06': 'rEyelidHeight',
+    '07': 'lEyelidHeight',
+    '08': 'rEyelidTilt',
+    '09': 'lEyelidTilt',
+    '0A': 'eyeTargetX',
+    '0B': 'eyeTargetY',
+    '0C': 'XTrans',
+    '0D': 'YTrans',
+    '0E': 'scaleX',
+    '0F': 'scaleY',
+    '10': 'scaleZ',
+    '11': 'ballScale',
+    '12': 'masterScale',
+    '13': 'rEyeSizeXXX',
+    '14': 'lEyeSizeXXX',
+    '15': 'rArmSizeXXX',
+    '16': 'lArmSizeXXX',
+    '17': 'rLegSizeXXX',
+    '18': 'lLegSizeXXX',
+    '19': 'rHandSizeXXX',
+    '1A': 'lHandSizeXXX',
+    '1B': 'rFootSizeXXX',
+    '1C': 'lFootSizeXXX',
+    '1D': 'headSizeXXX',
+    '1E': 'bodyExtend',
+    '1F': 'frontLegExtend',
+    '20': 'hindLegExtend',
+    '21': 'faceExtend',
+    '22': 'headEnlarge',
+    '23': 'headEnlargeBalance',
+    '24': 'earExtend',
+    '25': 'footEnlarge',
+    '26': 'footEnlargeBalance',
+    '27': 'preRotation',
+    '28': 'preRoll',
+    '29': 'addBallz0',
+    '2A': 'addBallzFlower1',
+    '2B': 'addBallzHeart2',
+    '2C': 'addBallzQuestion3',
+    '2D': 'addBallzExclamation4',
+    '2E': 'addBallzLightBulbOff5',
+    '2F': 'addBallzStickMan6',
+    '30': 'addBallzCrossbones7',
+    '31': 'addBallzLightning8',
+    '32': 'addBallzBrokenHeart9',
+    '33': 'addBallzSnowOne10',
+    '34': 'addBallzSnowTwo11',
+    '35': 'addBallzSnowThree12',
+    '36': 'addBallzLightBulbOn13',
+    '37': 'addBallzTears14',
+    '38': 'addBallzOddLove15',
+    '39': 'morph',
+    '3A': 'bothEyelidHeights',
+    '3B': 'bothEyelidTilts',
+    '3C': 'bothEyeSizes',
+    '3D': 'bothArmSizes',
+    '3E': 'bothLegSizes',
+    '3F': 'rightLimbSizes',
+    '40': 'leftLimbSizes',
+    '41': 'allLimbSizes',
+    '42': 'bothHandSizes',
+    '43': 'bothFeetSizes',
+    '44': 'rightDigitSizes',
+    '45': 'leftDigitSizes',
+    '46': 'allDigitSizes',
+    '47': 'allFudgers',
 }
