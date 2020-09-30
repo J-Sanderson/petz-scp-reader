@@ -179,6 +179,9 @@ function parseIndividualScript(script) {
                 if (callsFudger.includes(scpVerbs[toHexString(command[0].bytes[0])]) && i === 1) {
                     // if fudger and first param, show fudger name
                     list.push(` ${fudgers[toHexString(command[i].bytes[0])]}`);
+                } else if (scpVerbs[toHexString(command[0].bytes[0])] === 'cueCode1' && i === 1) {
+                    // if cue code, show cue code name
+                    list.push(` ${cueCodes[toHexString(command[i].bytes[0])]}`);
                 } else {
                     // else show param as hex number
                     list.push(` ${toHexString(command[i].bytes[0])}`);
