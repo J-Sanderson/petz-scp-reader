@@ -179,6 +179,9 @@ function parseIndividualScript(script) {
                 if (callsFudger.includes(scpVerbs[toHexString(command[0].bytes[0])]) && i === 1) {
                     // if fudger and first param, show fudger name
                     list.push(` ${fudgers[toHexString(command[i].bytes[0])]}`);
+                } else if (scpVerbs[toHexString(command[0].bytes[0])] === 'cueCode1' && i === 1) {
+                    // if cue code, show cue code name
+                    list.push(` ${cueCodes[toHexString(command[i].bytes[0])]}`);
                 } else {
                     // else show param as hex number
                     list.push(` ${toHexString(command[i].bytes[0])}`);
@@ -392,4 +395,48 @@ const fudgers = {
     '45': 'leftDigitSizes',
     '46': 'allDigitSizes',
     '47': 'allFudgers',
+}
+
+const cueCodes = {
+    '00': 'introDone',
+    '01': 'introNotDone',
+    '02': 'grabObject',
+    '03': 'releaseObject',
+    '04': 'lookAtInterest',
+    '05': 'lookAtInteractor',
+    '06': 'useObject',
+    '07': 'swatObject',
+    '08': 'gnawObject',
+    '09': 'scratchObject',
+    '0A': 'digHole',
+    '0B': 'fillHole',
+    '0C': 'trip',
+    '0D': 'snoreActive',
+    '0E': 'snoreIn',
+    '0F': 'snoreOut',
+    '10': 'snoreDream',
+    '11': 'ateFood',
+    '12': 'scare',
+    '13': 'stepHandL',
+    '14': 'stepHandR',
+    '15': 'stepFootL',
+    '16': 'stepFootR',
+    '17': 'stompHandL',
+    '18': 'stompHandR',
+    '19': 'stompFootL',
+    '1A': 'stompFootR',
+    '1B': 'land',
+    '1C': 'scuff',
+    '1D': 'showLinez',
+    '1E': 'hideLinez',
+    '1F': 'NONE',
+    '20': 'cursor',
+    '21': 'shelf',
+    '22': 'otherPet',
+    '23': 'focusSprite1',
+    '24': 'focusSprite2',
+    '25': 'focusSprite3',
+    '26': 'percentChance',
+    '27': 'ifSoundAdult',
+    '28': 'isAdoptionKit',
 }

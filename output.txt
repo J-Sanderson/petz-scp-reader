@@ -379,7 +379,7 @@
     Script dword count: 8
     Commands:
     00: startPos
-	0F: enableFudgeAim1, 00
+	0F: enableFudgeAim1, rotation
 	33: sequence2, B8, BE
 	63: endPos
         
@@ -522,7 +522,7 @@
     Script dword count: 8
     Commands:
     00: startPos
-	0F: enableFudgeAim1, 00
+	0F: enableFudgeAim1, rotation
 	33: sequence2, AB, B1
 	63: endPos
         
@@ -547,8 +547,8 @@
     Script dword count: 24
     Commands:
     00: startPos
-	39: setFudgerRate2, 03, B8
-	39: setFudgerRate2, 04, B8
+	39: setFudgerRate2, headRotation, B8
+	39: setFudgerRate2, headTilt, B8
 	55: startBlockLoop1
 	2F: rand2, 01, 04
 	1E: lookForward0
@@ -627,7 +627,7 @@
     Script dword count: 8
     Commands:
     00: startPos
-	0F: enableFudgeAim1, 00
+	0F: enableFudgeAim1, rotation
 	33: sequence2, C2, C5
 	63: endPos
         
@@ -697,7 +697,7 @@
 	2A: playLayeredAction3, 27, 01, 01
 	48: soundPlay3, 06, 07, 08
 	33: sequence2, EA, F4
-	09: cueCode1, 00
+	09: cueCode1, introDone
 	33: sequence2, F5, FE
 	63: endPos
         
@@ -728,7 +728,7 @@
     Commands:
     00: startPos
 	33: sequence2, 71, 74
-	09: cueCode1, 02
+	09: cueCode1, grabObject
 	33: sequence2, 75, 7A
 	63: endPos
         
@@ -741,7 +741,7 @@
 	55: startBlockLoop1
 	2F: rand2, 01, 06
 	1E: lookForward0
-	3A: setFudgerTarget2, 00
+	3A: setFudgerTarget2, rotation
 	2F: rand2, 1E, E2
 	27: playAction2, 01
 	2F: rand2, 01, 02
@@ -779,23 +779,23 @@
 	55: startBlockLoop1
 	2F: rand2, 05, 14
 	1E: lookForward0
-	38: setFudgerDrift2, 00
+	38: setFudgerDrift2, rotation
 	2F: rand2, 07, 0B
 	27: playAction2, 1E
 	2F: rand2, 01, 02
 	11: endBlock0
-	30: resetFudger1, 00
+	30: resetFudger1, rotation
 	11: endBlock0
 	59: startBlockElse0
 	55: startBlockLoop1
 	2F: rand2, 05, 14
 	1E: lookForward0
-	38: setFudgerDrift2, 00
+	38: setFudgerDrift2, rotation
 	2F: rand2, F9, F5
 	27: playAction2, 1E
 	2F: rand2, 01, 02
 	11: endBlock0
-	30: resetFudger1, 00
+	30: resetFudger1, rotation
 	11: endBlock0
 	11: endBlock0
 	63: endPos
@@ -809,12 +809,12 @@
 	2F: rand2, 02, 04
 	55: startBlockLoop1
 	2F: rand2, 01, 04
-	38: setFudgerDrift2, 00
+	38: setFudgerDrift2, rotation
 	2F: rand2, FD, 02
 	27: playAction2, 13
 	2F: rand2, 01, 02
 	11: endBlock0
-	30: resetFudger1, 00
+	30: resetFudger1, rotation
 	27: playAction2, 07
 	2F: rand2, 02, 04
 	11: endBlock0
@@ -829,9 +829,9 @@
 	1E: lookForward0
 	55: startBlockLoop1
 	2F: rand2, 02, 04
-	38: setFudgerDrift2, 00, 14
+	38: setFudgerDrift2, rotation, 14
 	27: playAction2, 0A, 01
-	30: resetFudger1, 00
+	30: resetFudger1, rotation
 	27: playAction2, 1E
 	2F: rand2, 03, 08
 	11: endBlock0
@@ -847,7 +847,7 @@
 	2F: rand2, 02, 04
 	55: startBlockLoop1
 	2F: rand2, 01, 04
-	38: setFudgerDrift2, 00
+	38: setFudgerDrift2, rotation
 	2F: rand2, FC, 04
 	27: playAction2, 13
 	2F: rand2, 01, 04
@@ -856,7 +856,7 @@
 	27: playAction2, 13
 	2F: rand2, 01, 04
 	11: endBlock0
-	30: resetFudger1, 00
+	30: resetFudger1, rotation
 	57: startBlockChance1, 32
 	27: playAction2, 07
 	2F: rand2, 02, 04
@@ -872,7 +872,7 @@
     Script dword count: 87
     Commands:
     00: startPos
-	3A: setFudgerTarget2, 00
+	3A: setFudgerTarget2, rotation
 	2F: rand2, F9, 07
 	27: playAction2, 13
 	2F: rand2, 04, 07
@@ -883,7 +883,7 @@
 	1D: lookAtUser0
 	27: playAction2, 13, 01
 	1D: lookAtUser0
-	30: resetFudger1, 00
+	30: resetFudger1, rotation
 	55: startBlockLoop1
 	2F: rand2, 01, 03
 	57: startBlockChance1, 32
