@@ -52,7 +52,6 @@ fs.readFile(process.argv[2], function (err, data) {
         .uint32('dwordCount');
     const scriptDwords = scriptDwordParser.parse(data);
 
-    //this causes the wrong parameters
     const dwordParser = new Parser()
         .endianess('little')
         .array('bytes', {
@@ -71,11 +70,6 @@ fs.readFile(process.argv[2], function (err, data) {
         });
     const script = scriptParser.parse(data);
 
-    // console.log(header);
-    // console.log(actions);
-    // console.log(scriptDwords);
-    // console.log(script.dwords);
-
     fs.writeFile('output.txt', parseResults(header, actions, scriptDwords, script), function(err) {
         if (err) {
             console.log('Error saving file');
@@ -88,35 +82,36 @@ fs.readFile(process.argv[2], function (err, data) {
 
 function parseResults(header, actions, scriptDwords, script) {
     return `
-    ${process.argv[2]} output:
+${process.argv[2]} output:
 
-    HEADER:
-    Number of animations: ${header.animations}
-    Unknown value: ${header.unknown}
-    Number of actions: ${header.actions}
+HEADER:
+Number of animations: ${header.animations}
+Unknown value: ${header.unknown}
+Number of actions: ${header.actions}
 
-    -----
+-----
 
-    ACTIONS:${parseActions(actions)}
-    -----
+ACTIONS:${parseActions(actions)}
 
-    SCRIPTS:
-    Number of script dwords: ${scriptDwords.dwordCount}
-    ${parseScripts(script)}
+-----
+
+SCRIPTS:
+Number of script dwords: ${scriptDwords.dwordCount}
+ ${parseScripts(script)}
     `;
 }
 
 function parseActions(actions) {
     return actions.actions.map(function(action) {
         return `
-    ID: ${action.actionID}
-    Number of associated scripts: ${action.numScripts}
-    Start animation: ${action.animation1}
-    End animation: ${action.animation2}
-    Unknown value: ${action.unknown}
-    Same animation modifier: ${action.sameAnimationModifier}
-    Script start point: ${action.script}
-        `
+ID: ${action.actionID}
+Number of associated scripts: ${action.numScripts}
+Start animation: ${action.animation1}
+End animation: ${action.animation2}
+Unknown value: ${action.unknown}
+Same animation modifier: ${action.sameAnimationModifier}
+Script start point: ${action.script}
+     `
     }).join('');
 }
 
@@ -135,11 +130,11 @@ function parseScripts(script) {
     let dwordTotal = 0;
     let parsedScripts = chunkedScripts.map(function(script) {
         let string = `
-    Script start position: ${dwordTotal}
-    Script dword count: ${script[0].bytes[0]}
-    Commands:
-    ${parseIndividualScript(script.slice(1))}
-        `
+Script start position: ${dwordTotal}
+Script dword count: ${script[0].bytes[0]}
+Commands:
+${parseIndividualScript(script.slice(1))}
+    `
         dwordTotal += script[0].bytes[0];
         return string;
     }).join('');
@@ -168,12 +163,17 @@ function parseIndividualScript(script) {
         }
     });
 
+    let tabDepth = 0;
     let parsedScript = chunkedCommands.map(function(command) {
         let list = [];
         for (var i = 0; i < command.length; i++) {
             if (i === 0) {
+                // does a block end here?
+                if (endsBlock.includes(scpVerbs[toHexString(command[i].bytes[0])])) tabDepth--;
                 // get the verb
-                list.push(`${toHexString(command[i].bytes[0])}: ${scpVerbs[toHexString(command[i].bytes[0])]}`);
+                list.push(`${tab(tabDepth)}${toHexString(command[i].bytes[0])}: ${scpVerbs[toHexString(command[i].bytes[0])]}`);
+                // did that start a block?
+                if (startsBlock.includes(scpVerbs[toHexString(command[i].bytes[0])])) tabDepth++;
             } else {
                 // get the params
                 if (callsFudger.includes(scpVerbs[toHexString(command[0].bytes[0])]) && i === 1) {
@@ -189,8 +189,12 @@ function parseIndividualScript(script) {
             }
         }
         return list;
-    }).join('\n\t');
+    }).join('\n');
     return parsedScript;
+}
+
+function tab(depth) {
+    return depth <= 0 ? '' : '\t'.repeat(depth);
 }
 
 function leftPad(string) {
@@ -306,6 +310,20 @@ const scpVerbs = {
     '62': 'throwMe0',
     '63': 'endPos',
 }
+
+const startsBlock = [
+    'startBlockLoop1',
+    'startBlockCallback2',
+    'startBlockChance1',
+    'startBlockDialogSynch0',
+    'startBlockElse0',
+    'startBlockListen0',
+];
+
+const endsBlock = [
+    'endBlock0',
+    'endBlockAlign0',
+];
 
 const callsFudger = [
     'alignFudgeBallToPtSetup2',
