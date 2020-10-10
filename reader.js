@@ -88,35 +88,36 @@ fs.readFile(process.argv[2], function (err, data) {
 
 function parseResults(header, actions, scriptDwords, script) {
     return `
-    ${process.argv[2]} output:
+${process.argv[2]} output:
 
-    HEADER:
-    Number of animations: ${header.animations}
-    Unknown value: ${header.unknown}
-    Number of actions: ${header.actions}
+HEADER:
+Number of animations: ${header.animations}
+Unknown value: ${header.unknown}
+Number of actions: ${header.actions}
 
-    -----
+-----
 
-    ACTIONS:${parseActions(actions)}
-    -----
+ACTIONS:${parseActions(actions)}
 
-    SCRIPTS:
-    Number of script dwords: ${scriptDwords.dwordCount}
-    ${parseScripts(script)}
+-----
+
+SCRIPTS:
+Number of script dwords: ${scriptDwords.dwordCount}
+ ${parseScripts(script)}
     `;
 }
 
 function parseActions(actions) {
     return actions.actions.map(function(action) {
         return `
-    ID: ${action.actionID}
-    Number of associated scripts: ${action.numScripts}
-    Start animation: ${action.animation1}
-    End animation: ${action.animation2}
-    Unknown value: ${action.unknown}
-    Same animation modifier: ${action.sameAnimationModifier}
-    Script start point: ${action.script}
-        `
+ID: ${action.actionID}
+Number of associated scripts: ${action.numScripts}
+Start animation: ${action.animation1}
+End animation: ${action.animation2}
+Unknown value: ${action.unknown}
+Same animation modifier: ${action.sameAnimationModifier}
+Script start point: ${action.script}
+     `
     }).join('');
 }
 
@@ -135,11 +136,11 @@ function parseScripts(script) {
     let dwordTotal = 0;
     let parsedScripts = chunkedScripts.map(function(script) {
         let string = `
-    Script start position: ${dwordTotal}
-    Script dword count: ${script[0].bytes[0]}
-    Commands:
-    ${parseIndividualScript(script.slice(1))}
-        `
+Script start position: ${dwordTotal}
+Script dword count: ${script[0].bytes[0]}
+Commands:
+${parseIndividualScript(script.slice(1))}
+    `
         dwordTotal += script[0].bytes[0];
         return string;
     }).join('');
@@ -189,7 +190,7 @@ function parseIndividualScript(script) {
             }
         }
         return list;
-    }).join('\n\t');
+    }).join('\n');
     return parsedScript;
 }
 
