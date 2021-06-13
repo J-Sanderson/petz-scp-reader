@@ -184,7 +184,14 @@ function parseIndividualScript(script) {
                     list.push(` ${cueCodes[toHexString(command[i].bytes[0])]}`);
                 } else {
                     // else show param as hex number
-                    list.push(` ${toHexString(command[i].bytes[0])}`);
+                    list.push(
+                        ' ' +
+                        command[i].bytes.map(function(byte) {
+                            return toHexString(byte);
+                        })
+                        .reverse()
+                        .join('')
+                    );
                 }
             }
         }
